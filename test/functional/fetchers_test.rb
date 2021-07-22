@@ -47,7 +47,7 @@ describe "the fetchers" do
       it "should throw an exception not a stacktrace with a git fetcher" do
         assert_fetcher_failed_cleanly(
           run_result,
-          /unable to access/,
+          /repository .+ not found/,
           "http://localhost/no/such"
         )
       end
